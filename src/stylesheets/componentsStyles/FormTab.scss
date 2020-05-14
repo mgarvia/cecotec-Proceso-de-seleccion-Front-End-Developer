@@ -1,0 +1,16 @@
+@import '../utils/variables';
+
+.formTab {
+  width: 100%;
+  padding: 15px;
+}
+.activeTab {
+  border-top: 4px solid $mainColor;
+  border-right: 1px solid $secondaryColor;
+  border-left: 1px solid $secondaryColor;
+}
+.inactiveTab {
+  background-color: $backgroundColor2;
+  border-top: 4px solid $secondaryColor;
+  box-shadow: -1px 1px $secondaryColor;
+}

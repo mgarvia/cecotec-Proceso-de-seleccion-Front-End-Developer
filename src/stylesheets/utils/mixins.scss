@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin forTabletV {
+  @media all and (min-width: $TabletV) { @content; }
+}
+
+@mixin forTabletH {
+  @media all and (min-width: $TabletH) { @content; }
+}
+
+@mixin forPc {
+  @media all and (min-width: $pc) { @content; }
+}

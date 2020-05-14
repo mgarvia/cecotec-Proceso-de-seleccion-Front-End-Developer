@@ -1,0 +1,10 @@
+@import '../utils/variables';
+
+body {
+  font-family: $bodyFont;
+  font-size: $bodyFontSize;
+}
+
+.hidden {
+  display: none;
+}

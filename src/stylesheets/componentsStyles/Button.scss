@@ -1,0 +1,33 @@
+@import "../utils/variables";
+
+.Button {
+  background-color: $mainColor;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border-radius: 5px;
+  .fas {
+    margin-right: 12px;
+  }
+}
+
+.actions {
+  padding: 5px;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  &__blue {
+    background-color: blue;
+  }
+  &__green {
+    background-color: green;
+  }
+  &__red {
+    background-color: red;
+  }
+  .fas {
+    margin: 0px;
+    color: white;
+  text-align: center;
+  }
+}

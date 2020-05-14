@@ -1,0 +1,17 @@
+@import 'core/normalize.scss';
+@import 'core/reset.scss';
+@import 'core/structure.scss';
+@import 'utils/variables.scss';
+
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: $bodyFont;
+  font-size: $bodyFontSize;
+  color: $bodyFontColor;
+}
