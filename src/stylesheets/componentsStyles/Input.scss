@@ -14,5 +14,10 @@
     border: 1px solid $secondaryColor;
     border-radius: 5px;
   }
-
+}
+.register {
+  display: none;
+}
+.show {
+  display: inherit;
 }

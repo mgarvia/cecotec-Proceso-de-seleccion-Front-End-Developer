@@ -1,11 +1,13 @@
 {
   "users": [
     {
-      "user": "Juan",
+      "name": "Juan Palomo",
+      "e-mail": "juan@mail.com",
       "password": "Superman"
     },
     {
-      "user": "Juana",
+      "name": "Juana Paloma",
+      "e-mail": "juana@mail.com",
       "password": "Superwoman"
     }
   ],

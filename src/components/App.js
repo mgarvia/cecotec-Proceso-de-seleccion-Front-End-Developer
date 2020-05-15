@@ -2,7 +2,6 @@ import React from 'react';
 import Login from './Login';
 import Crud from './Crud.';
 
-// import logo from '../logo.svg';
 import '../stylesheets/App.scss';
 import fetchData from '../services/fetchData';
 
@@ -21,12 +20,14 @@ class App extends React.Component {
           data: data
         })
       })
-    console.log(this.state.data)
   }
   render() {
+    const {data} = this.state;
     return (
       <div className="App">
-        <Login />
+        <Login 
+        data={data}
+        />
         {/* <Crud /> */}
       </div>
     );
