@@ -2,12 +2,12 @@
   "users": [
     {
       "name": "Juan Palomo",
-      "e-mail": "juan@mail.com",
+      "email": "juan@mail.com",
       "password": "Superman"
     },
     {
       "name": "Juana Paloma",
-      "e-mail": "juana@mail.com",
+      "email": "juana@mail.com",
       "password": "Superwoman"
     }
   ],
