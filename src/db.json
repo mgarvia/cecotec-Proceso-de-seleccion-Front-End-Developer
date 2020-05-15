@@ -3,12 +3,12 @@
     {
       "user": "Juan",
       "password": "Superman"
-    }
+    },
     {
       "user": "Juana",
       "password": "Superwoman"
     }
-  ]
+  ],
   "products": [
     {
       "id": "1",
@@ -18,8 +18,8 @@
       "stock": "100",
       "provider": "Proveedor 1",
       "category": "Categoría 1",
-      "state": "Activo",
-    }
+      "state": "Activo"
+    },
     {
       "id": "2",
       "name": "Product 2",
@@ -28,8 +28,8 @@
       "stock": "142",
       "provider": "Proveedor 2",
       "category": "Categoría 2",
-      "state": "Activo",
-    }
+      "state": "Activo"
+    },
     {
       "id": "3",
       "name": "Product 3",
@@ -38,8 +38,8 @@
       "stock": "10",
       "provider": "Proveedor 3",
       "category": "Categoría 2",
-      "state": "Activo",
-    }
+      "state": "Activo"
+    },
     {
       "id": "4",
       "name": "Product 4",
@@ -48,8 +48,8 @@
       "stock": "74",
       "provider": "Proveedor 1",
       "category": "Categoría 2",
-      "state": "Activo",
-    }
+      "state": "Activo"
+    },
     {
       "id": "5",
       "name": "Product 5",
@@ -58,8 +58,8 @@
       "stock": "110",
       "provider": "Proveedor 3",
       "category": "Categoría 5",
-      "state": "Inactivo",
-    }
+      "state": "Inactivo"
+    },
     {
       "id": "6",
       "name": "Product 6",
@@ -68,8 +68,8 @@
       "stock": "12",
       "provider": "Proveedor 5",
       "category": "Categoría 1",
-      "state": "Activo",
-    }
+      "state": "Activo"
+    },
     {
       "id": "7",
       "name": "Product 7",
@@ -78,7 +78,7 @@
       "stock": "245",
       "provider": "Proveedor 2",
       "category": "Categoría 3",
-      "state": "Inactivo",
+      "state": "Inactivo"
     }
   ]
 }

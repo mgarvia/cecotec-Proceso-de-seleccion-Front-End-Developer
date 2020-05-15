@@ -33,7 +33,7 @@ const Login = (props) => {
           placeholder={''}
           type={'password'}
         />
-        <a className="ForgetPass" href="#">¿Olvidó su contraseña?</a>
+        {/* <a className="ForgetPass" href="#">¿Olvidó su contraseña?</a> */}
         <Button
           type={'submit'}
           name={'Iniciar sesión'}

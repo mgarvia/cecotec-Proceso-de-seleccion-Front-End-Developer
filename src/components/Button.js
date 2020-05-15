@@ -5,7 +5,7 @@ const Button = props => {
   const {className, type, icon, name} = props;
   return (
     <button className={`Button ${className}`} type={type}> 
-      <i class={icon}></i>
+      <i className={icon}></i>
       {name}
     </button>
   )
