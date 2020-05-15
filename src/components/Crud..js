@@ -34,8 +34,8 @@ const Crud = () => {
             className={''}
           />
         </section>
-        <table className="Crud__main--results">
-          <tr>
+        <section className="Crud__main--results">
+          <div>
             <ul className="results">
               <li><h2>Código</h2></li>
               <li><h2>Nombre</h2></li>
@@ -47,8 +47,8 @@ const Crud = () => {
               <li><h2 className="hidden">Estado</h2></li>
               <li><h2>Acciones</h2></li>
             </ul>
-          </tr>
-          <tr>
+          </div>
+          <div>
             <ul className="results">
               <li>1</li>
               <li>Aspiradora</li>
@@ -79,8 +79,8 @@ const Crud = () => {
                 />
               </div>
             </ul>
-          </tr>
-        </table>
+          </div>
+        </section>
       </main>
     </div>
   )

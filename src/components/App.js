@@ -8,8 +8,8 @@ import '../stylesheets/App.scss';
 function App() {
   return (
     <div className="App">
-     {/* <Login />  */}
-     <Crud />
+     <Login /> 
+     {/* <Crud /> */}
     </div>
   );
 }

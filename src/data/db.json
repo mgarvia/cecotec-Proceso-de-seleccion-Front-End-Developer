@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "user": "Juan",
+      "password": "Superman"
+    }
+    {
+      "user": "Juana",
+      "password": "Superwoman"
+    }
+  ]
+  "products": [
+    {
+      "id": "1",
+      "name": "Product 1",
+      "description": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam qui quasi officia nulla laudantium inventore consequuntur maxime, dolorem illo. Repellat, neque incidunt provident voluptate accusamus eius! Maiores, quos a.",
+      "price": "150",
+      "stock": "100",
+      "provider": "Proveedor 1",
+      "category": "Categoría 1",
+      "state": "Activo",
+    }
+    {
+      "id": "2",
+      "name": "Product 2",
+      "description": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam qui quasi officia nulla laudantium inventore consequuntur maxime, dolorem illo. Repellat, neque incidunt provident voluptate accusamus eius! Maiores, quos a.",
+      "price": "450",
+      "stock": "142",
+      "provider": "Proveedor 2",
+      "category": "Categoría 2",
+      "state": "Activo",
+    }
+    {
+      "id": "3",
+      "name": "Product 3",
+      "description": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam qui quasi officia nulla laudantium inventore consequuntur maxime, dolorem illo. Repellat, neque incidunt provident voluptate accusamus eius! Maiores, quos a.",
+      "price": "80",
+      "stock": "10",
+      "provider": "Proveedor 3",
+      "category": "Categoría 2",
+      "state": "Activo",
+    }
+    {
+      "id": "4",
+      "name": "Product 4",
+      "description": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam qui quasi officia nulla laudantium inventore consequuntur maxime, dolorem illo. Repellat, neque incidunt provident voluptate accusamus eius! Maiores, quos a.",
+      "price": "310",
+      "stock": "74",
+      "provider": "Proveedor 1",
+      "category": "Categoría 2",
+      "state": "Activo",
+    }
+    {
+      "id": "5",
+      "name": "Product 5",
+      "description": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam qui quasi officia nulla laudantium inventore consequuntur maxime, dolorem illo. Repellat, neque incidunt provident voluptate accusamus eius! Maiores, quos a.",
+      "price": "15",
+      "stock": "110",
+      "provider": "Proveedor 3",
+      "category": "Categoría 5",
+      "state": "Inactivo",
+    }
+    {
+      "id": "6",
+      "name": "Product 6",
+      "description": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam qui quasi officia nulla laudantium inventore consequuntur maxime, dolorem illo. Repellat, neque incidunt provident voluptate accusamus eius! Maiores, quos a.",
+      "price": "24",
+      "stock": "12",
+      "provider": "Proveedor 5",
+      "category": "Categoría 1",
+      "state": "Activo",
+    }
+    {
+      "id": "7",
+      "name": "Product 7",
+      "description": "  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quibusdam qui quasi officia nulla laudantium inventore consequuntur maxime, dolorem illo. Repellat, neque incidunt provident voluptate accusamus eius! Maiores, quos a.",
+      "price": "650",
+      "stock": "245",
+      "provider": "Proveedor 2",
+      "category": "Categoría 3",
+      "state": "Inactivo",
+    }
+  ]
+}
