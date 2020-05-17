@@ -1,89 +1,94 @@
 import React from 'react';
+import FormTab from './FormTab';
 import Button from './Button';
-import Input from './Input';
+import Product from './Product';
+import EditProduct from './EditProduct';
+import PropTypes from 'prop-types';
 import '../stylesheets/componentsStyles/Crud.scss'
 
-const Crud = () => {
+const Crud = props => {
+  const { counter, toggleEditProduct, setProductData, updateProductInfo, setId, showEditProduct, products, incrementCounter, resetInputs, removeProduct
+  } = props;
+
+  const newProduct = () => {
+    resetInputs()
+    incrementCounter()
+    setTimeout(setId, 3000)
+    toggleEditProduct('EditProduct__new')
+  }
+
+  const sendProductInfo = () => updateProductInfo();
+
   return (
     <div className="Crud">
+      <EditProduct
+        className={'hidden'}
+        id={'EditProduct__new'}
+        tabTitle={'Nuevo Producto'}
+        tabClass={'bg__main'}
+        counter={counter}
+        submitBtnTitle={'Añadir Producto'}
+        submitBtnIcon={'fas fa-plus-circle'}
+        btnName={'Añadir Producto'}
+        handleCloseBtnEvt={toggleEditProduct}
+        setProductData={setProductData}
+        handleSubmitBtnEvt={sendProductInfo}
+        setId={setId}
+      />
+
       <header className="Crud__header">
-        <h1 className="Crud__header--title">Listado de Productos</h1>
+        <h1 className="Crud__header--title">Productos</h1>
         <Button
-          class={''}
+          className={''}
           type={'button'}
           icon={'fas fa-plus-circle'}
-          name={'Nuevo Producto'}
+          title={'Añadir producto'}
+          btnTitle={'Nuevo Producto'}
+          onClick={newProduct}
         />
       </header>
       <main className="Crud__main">
-        <section className="Crud__main--search">
-          <Input
-            inputName={'Código'}
-            placeholder={'Código'}
-            type={'text'}
-          />
-          <Input
-            inputName={'Nombre'}
-            placeholder={'Nombre'}
-            type={'text'}
-          />
-          <Button
-            type={'button'}
-            name={'Buscar'}
-            icon={'fas fa-search'}
-            className={''}
-          />
-        </section>
+        <FormTab title={'Listado de productos'} />
         <section className="Crud__main--results">
           <div>
             <ul className="results">
-              <li><h2>Código</h2></li>
-              <li><h2>Nombre</h2></li>
-              <li><h2 className="hidden">Descripción</h2></li>
-              <li><h2 className="hidden">Precio</h2></li>
-              <li><h2 className="hidden">Stock</h2></li>
-              <li><h2 className="hidden">Proveedor</h2></li>
-              <li><h2 className="hidden">Categoría</h2></li>
-              <li><h2 className="hidden">Estado</h2></li>
-              <li><h2>Acciones</h2></li>
+              <li className="results-code"><h2>Código</h2></li>
+              <li className="results-name"><h2>Nombre</h2></li>
+              <li className="results-description"><h2>Descripción</h2></li>
+              <li className="results-price"><h2>Precio</h2></li>
+              <li className="results-stock"><h2>Stock</h2></li>
+              <li className="results-provider"><h2>Proveedor</h2></li>
+              <li className="results-category"><h2>Categoría</h2></li>
+              <li className="results-state"><h2>Estado</h2></li>
+              <li className="results-actions"><h2>Acciones</h2></li>
             </ul>
+
           </div>
           <div>
-            <ul className="results">
-              <li>1</li>
-              <li>Aspiradora</li>
-              <li className="hidden">Descripción</li>
-              <li className="hidden">15</li>
-              <li className="hidden">100</li>
-              <li className="hidden">Proveedor 1</li>
-              <li className="hidden">Categoría 2</li>
-              <li className="hidden">Activo</li>
-              <div className="results__actions">
-                <Button
-                  className={'actions actions__blue'}
-                  type={'button'}
-                  icon={'fas fa-pen'}
-                  name={''}
-                />
-                <Button
-                  className={'actions actions__green'}
-                  type={'button'}
-                  icon={'fas fa-eye'}
-                  name={''}
-                />
-                <Button
-                  className={'actions actions__red'}
-                  type={'button'}
-                  icon={'fas fa-tdash'}
-                  name={''}
-                />
-              </div>
-            </ul>
+            {products.map((product, index) =>
+              <Product key={`Product-${index}`}
+                id={product.id}
+                name={product.name}
+                description={product.description}
+                price={parseInt(product.price)}
+                stock={parseInt(product.stock)}
+                provider={product.provider}
+                category={product.category}
+                state={product.state}
+                showEditProduct={showEditProduct}
+                removeProduct={removeProduct}
+              />
+            )}
           </div>
         </section>
       </main>
     </div>
   )
+}
+
+Crud.propTypes = {
+  counter: PropTypes.number,
+  products: PropTypes.array,
 }
 
 export default Crud;

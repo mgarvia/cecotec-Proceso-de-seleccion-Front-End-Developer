@@ -1,0 +1,40 @@
+@import "../utils//variables";
+
+.EditProduct {
+  &__wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: grey, $alpha: 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__container {
+    box-shadow: 2.5px 2.5px $secondaryColor;
+    border-top: none;
+    background-color: white;
+    width: 80%;
+  }
+  &__form {
+    padding: 15px;
+  }
+  &__btn {
+    padding: 15px;
+    padding-top: 0;
+  }
+}
+
+.remove-box {
+  padding: 15px;
+  p {
+    margin: 10px;
+  }
+}
+
+.readonly {
+  pointer-events: none;
+}

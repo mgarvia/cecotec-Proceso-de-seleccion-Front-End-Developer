@@ -1,0 +1,38 @@
+@import '../utils/variables.scss';
+@import '../utils/mixins.scss';
+
+.results {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  margin: 5px 0;
+  .results-price, .results-stock, .results-provider, .results-category, .results-state {
+    display: none;
+    @include forTablet {
+      display: inherit;
+    }
+  }
+  .results-description {
+    display: none;
+    @include forPc {
+      display: inherit;
+    }
+  }
+  li {
+    width: 30%;
+    text-align: left;
+  }
+}
+
+.product {
+  width: 90vw;
+  height: 90vh;
+  &__info {
+    text-align: left;
+    * {
+      margin: 10px 0;
+    }
+  }
+}

@@ -13,11 +13,10 @@
     width: 100%;
     border: 1px solid $secondaryColor;
     border-radius: 5px;
+    &:focus {
+      border: none;
+      outline-color: $mainColor;
+    }
   }
 }
-.register {
-  display: none;
-}
-.show {
-  display: inherit;
-}
+

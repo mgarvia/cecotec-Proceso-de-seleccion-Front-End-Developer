@@ -1,19 +1,25 @@
 @import "../utils/variables";
+@import "../utils/mixins";
 @import "../core/structure";
 
 .Crud {
   width: 100vw;
   height: 100vh;
   padding: 15px;
-  // border: 1px solid $secondaryColor;
+  @include forPc {
+    max-width: 1200px;
+  }
   &__header {
     background-color: $backgroundColor;
     padding: 15px;
     padding-top: 0;
-    // display: flex;
-    // flex-direction: clumn;
-    // justify-content: center;
-    // align-items: center;
+    @include forTablet {
+    display: flex;
+    flex-direction: clumn;
+    justify-content: center;
+    align-items: center;
+    }
+
     &--title {
       width: 100%;
       padding: 15px;
@@ -36,20 +42,6 @@
       padding: 10px;
       margin: 5px 0;
       width: 100%;
-      .results {
-        // width: 100%;
-        display: flex;
-        // grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        text-align: left;
-        margin: 5px 0;
-        &__actions {
-          display: flex;
-        }
-        td {
-          width: 30%;
-        }
-      }
     }
   }
 }

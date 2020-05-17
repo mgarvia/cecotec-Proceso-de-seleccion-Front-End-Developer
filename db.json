@@ -2,13 +2,13 @@
   "users": [
     {
       "name": "Juan Palomo",
-      "e-mail": "juan@mail.com",
-      "password": "Superman"
+      "email": "juan@mail.com",
+      "password": "1234"
     },
     {
       "name": "Juana Paloma",
-      "e-mail": "juana@mail.com",
-      "password": "Superwoman"
+      "email": "juana@mail.com",
+      "password": "1234"
     }
   ],
   "products": [

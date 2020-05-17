@@ -2,77 +2,48 @@ import React from 'react';
 import Input from './Input';
 import Button from './Button';
 import FormTab from './FormTab';
-import fetchData from '../services/fetchData';
+import { Link } from 'react-router-dom';
 import '../stylesheets/componentsStyles/Login.scss';
 
 const Login = (props) => {
-  const login = document.querySelector('.Login');
-  const { data } = props;
-  const changeTab = () => {
-    login.querySelectorAll('.formTab').forEach(tab => tab.classList.toggle('activeTab'));
-    login.querySelectorAll('.register').forEach(input => input.classList.toggle('show'));
-  }
+  const { setData, submit } = props;
 
-  const submit = e => {
-    console.log(data)
-    e.preventDefault();
-    const email = login.querySelector('#email');
-    const password = login.querySelector('#password');
-    data.users.map(user => user.email === email && user.password === password ? console.log(true) : console.log(false))
-  }
+  const getUserInfo = e => setData(e);
+  const getEvt = e => submit(e)
 
   return (
     <div className="Login">
-      <div className="Login__tabs" onClick={changeTab} >
+      <div>
         <FormTab
-          tabName={'Iniciar sesión'}
-          tabClass={'Login__tabs--login activeTab'}
-        />
-        <FormTab
-          tabName={'Nuevo usuario'}
-          tabClass={'Login__tabs--register'}
+          title={'Iniciar sesión'}
+          className={'activeTab'}
         />
       </div>
-      <form className="Login__form" action="">
+      <form className="Login__form" autoComplete="on" method="post">
         <Input
-          id={'name'}
-          className={'register'}
-          inputName={'Nombre y apellidos'}
-          placeholder={''}
-          type={'text'}
-          name={'name'}
-        />
-        <Input
-          id={'email'}
-          className={''}
-          inputName={'Dirección de correo electrónico'}
-          placeholder={''}
-          type={'email'}
+          id={'login__email'}
+          labelName={'Dirección de correo electrónico'}
+          type={'email'}      
           name={'email'}
+          onKeyUp={getUserInfo}    
         />
         <Input
-          id={'password'}
-          className={''}
-          inputName={'Contraseña'}
-          placeholder={''}
-          type={'password'}
+          id={'login__password'}
+          labelName={'Contraseña'}
+          type={'password'} 
           name={'password'}
+          onKeyUp={getUserInfo} 
         />
-        {/* <a className="ForgetPass" href="#">¿Olvidó su contraseña?</a> */}
-        <Button
-          type={'submit'}
-          name={'Iniciar sesión'}
-          icon={'fas fa-lock'}
-          className={'register show'}
-          onClick={submit}
-        />
-        <Button
-          type={'submit'}
-          name={'Registrarse'}
-          icon={'fas fa-lock'}
-          className={'register'}
-        // onClick={register}
-        />
+        <p className="login__err errorMsg hidden">Email o contraseña incorrectos. Por favor inténtalo de nuevo.</p>
+        <Link to={"/productos"}>
+          <Button
+            type={'submit'}
+            title={'Iniciar sesión'}
+            btnTitle={'Iniciar sesión'}
+            icon={'fas fa-lock'}
+            onClick={getEvt}
+          />
+        </Link>
       </form>
     </div>
   )

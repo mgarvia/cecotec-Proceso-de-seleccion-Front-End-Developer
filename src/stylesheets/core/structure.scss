@@ -8,3 +8,35 @@ body {
 .hidden {
   display: none;
 }
+
+.errorMsg {
+  color: red;
+  margin-bottom: 15px;
+}
+
+.emptyInput {
+  border: 1px solid red;
+}
+
+.filledInput {
+  border: 1px solid green;
+}
+
+.bg {
+  &__main {
+    background-color: $mainColor;
+    color: white;
+  }
+  &__blue {
+    background-color: blue;
+    color: white;
+  }
+  &__green {
+    background-color: green;
+    color: white;
+  }
+  &__red {
+    background-color: red;
+    color: white;
+  }
+}
