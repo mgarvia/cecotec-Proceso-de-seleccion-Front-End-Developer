@@ -38,7 +38,7 @@ class App extends React.Component {
         this.setState({
           users: data.users,
           products: data.products,
-          login: true,
+          login: false,
           counter: data.products.length,
         })
       })
